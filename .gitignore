@@ -1,0 +1,10 @@
+.godot/
+/android/
+.gradle
+.kotlin
+.idea
+build
+jvm
+local.properties
+src/main/resources/META-INF/services/
+gdj
