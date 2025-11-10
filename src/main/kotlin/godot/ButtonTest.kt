@@ -9,9 +9,4 @@ import godot.global.GD
 class ButtonTest : Button(){
 	private var count = 0
 
-	@RegisterFunction
-	fun onButtonDown() {
-		count++
-		GD.print("button down: $count")
-	}
 }
