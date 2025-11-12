@@ -1,23 +1,32 @@
 import godot.annotation.RegisterClass
 import godot.annotation.RegisterFunction
 import godot.annotation.RegisterProperty
-import godot.api.AnimatedSprite2D
-import godot.api.Area2D
-import godot.api.Input
+import godot.annotation.RegisterSignal
+import godot.api.*
+import godot.core.Signal0
 import godot.core.Vector2
 import godot.core.asStringName
-import godot.global.GD
 
 @RegisterClass
 class Player : Area2D() {
 
 	@RegisterProperty
 	var speed: Int = 400
+
+	@RegisterSignal
+	val hitEvent : Signal0 = Signal0("hitEvent")
+
 	lateinit var screeSize : Vector2
+
+	private var collision2D: CollisionShape2D? = null
+	private var animation2d: AnimatedSprite2D? = null
 
 	@RegisterFunction
 	override fun _ready() {
 		screeSize = getViewportRect().size
+		collision2D = getNode("CollisionShape2D") as CollisionShape2D?
+		animation2d = getNode("AnimatedSprite2D") as AnimatedSprite2D?
+        hide()
 	}
 
 	@RegisterFunction
@@ -35,7 +44,6 @@ class Player : Area2D() {
 		if (Input.isActionPressed("move_down")) {
 			velocity.y += 1
 		}
-		val animation2d = getNode("AnimatedSprite2D") as AnimatedSprite2D?
 		if (velocity.length() > 0) {
 			velocity = velocity.normalized() * speed
 			animation2d?.play()
@@ -56,7 +64,19 @@ class Player : Area2D() {
 	}
 
 	@RegisterFunction
-	fun hitEventHandler() {
-		GD.print("hit_event")
+	fun onBodyEntered(body: Node2D) {
+		// 确保只发射一次
+		hide()
+		hitEvent.emit()
+		collision2D?.setDeferred("disabled", true)
+	}
+
+	@RegisterFunction
+	fun start(pos: Vector2?) {
+		pos?.let {
+			position = pos
+		}
+		show()
+		collision2D?.disabled = false
 	}
 }
