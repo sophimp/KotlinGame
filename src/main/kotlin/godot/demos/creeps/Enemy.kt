@@ -1,4 +1,4 @@
-package godot.enemy
+package godot.demos.creeps
 
 import godot.annotation.RegisterClass
 import godot.annotation.RegisterFunction
@@ -13,7 +13,7 @@ class Enemy : RigidBody2D(){
 	private var animatedSprite2D: AnimatedSprite2D? = null
 	private var collisionShape2D: CollisionShape2D? = null
 
-    @RegisterFunction
+	@RegisterFunction
 	override fun _ready() {
 		animatedSprite2D = getNode("AnimatedSprite2D") as AnimatedSprite2D?
 		collisionShape2D = getNode("CollisionShape2D") as CollisionShape2D?
@@ -26,7 +26,7 @@ class Enemy : RigidBody2D(){
 		}
 	}
 
-    @RegisterFunction
+	@RegisterFunction
 	override fun _process(delta: Double) {
 	}
 

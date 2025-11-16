@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bc08dhoyyn3kv"]
 
-[ext_resource type="Script" uid="uid://ibct32mlctir" path="res://src/main/kotlin/godot/MainScene.kt" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://bfeibj1dlhssa" path="res://player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dtahrfo73583x" path="res://enemy_mob.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://c7u8fnisawe3c" path="res://hud.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bfeibj1dlhssa" path="res://scene/creeps/player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bfoh6ojgjng1b" path="res://src/main/kotlin/godot/demos/creeps/MainScene.kt" id="1_jp5ph"]
+[ext_resource type="PackedScene" uid="uid://dtahrfo73583x" path="res://scene/creeps/enemy_mob.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c7u8fnisawe3c" path="res://scene/creeps/hud.tscn" id="3_1bvp3"]
 
 [sub_resource type="Curve2D" id="Curve2D_h2yge"]
 _data = {
@@ -12,7 +12,7 @@ _data = {
 point_count = 5
 
 [node name="Main" type="Node"]
-script = ExtResource("1_0xm2m")
+script = ExtResource("1_jp5ph")
 mob_scene = ExtResource("2_h2yge")
 
 [node name="HUD" parent="." instance=ExtResource("3_1bvp3")]
@@ -36,7 +36,6 @@ curve = SubResource("Curve2D_h2yge")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 
-[connection signal="start_game" from="HUD" to="." method="new_game"]
 [connection signal="hit_event" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="on_score_timer_timeout"]

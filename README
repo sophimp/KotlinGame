@@ -1,0 +1,8 @@
+
+使用 kotlin jvm godot 实现 [godot demo projects](https://github.com/godotengine/godot-demo-projects)
+
+项目结构
+|- art 游戏资源
+|- scene 各demo 的 godot 场景
+|- src 各demo 的脚本
+

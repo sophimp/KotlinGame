@@ -1,4 +1,4 @@
-package godot
+package godot.demos.creeps
 
 import godot.annotation.RegisterClass
 import godot.annotation.RegisterFunction
@@ -8,8 +8,6 @@ import godot.api.CanvasLayer
 import godot.api.Label
 import godot.api.Timer
 import godot.core.Signal0
-import godot.global.GD
-import java.util.concurrent.Delayed
 
 @RegisterClass
 class Hud : CanvasLayer(){

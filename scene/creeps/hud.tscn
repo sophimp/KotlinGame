@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7u8fnisawe3c"]
 
 [ext_resource type="Script" uid="uid://bo6ae5opcn54d" path="res://gdj/godot/CommonLabel.gdj" id="1_37p78"]
-[ext_resource type="Script" uid="uid://cso3s1pbbjqs6" path="res://src/main/kotlin/godot/Hud.kt" id="1_64ctp"]
-[ext_resource type="FontFile" uid="uid://bebq1jjr5cyam" path="res://art/Xolonium-Regular.ttf" id="2_8sq4i"]
+[ext_resource type="Script" uid="uid://bhmewicrb8erj" path="res://src/main/kotlin/godot/demos/creeps/Hud.kt" id="1_x5ufr"]
+[ext_resource type="FontFile" uid="uid://cx8q3mn0yabq" path="res://art/creeps/Xolonium-Regular.ttf" id="2_x5ufr"]
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource("1_64ctp")
+script = ExtResource("1_x5ufr")
 
 [node name="ScoreLabel" type="Label" parent="."]
 anchors_preset = 5
@@ -15,7 +15,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 90.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_fonts/font = ExtResource("2_x5ufr")
 theme_override_font_sizes/font_size = 65
 text = "0"
 horizontal_alignment = 1
@@ -33,7 +33,7 @@ offset_right = 240.0
 offset_bottom = 184.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_fonts/font = ExtResource("2_x5ufr")
 theme_override_font_sizes/font_size = 65
 text = "躲闪怪物!"
 horizontal_alignment = 1
@@ -54,7 +54,7 @@ offset_right = 134.0
 offset_bottom = -42.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_8sq4i")
+theme_override_fonts/font = ExtResource("2_x5ufr")
 theme_override_font_sizes/font_size = 65
 text = "开始游戏"
 

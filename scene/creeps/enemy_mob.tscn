@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dtahrfo73583x"]
 
-[ext_resource type="Script" uid="uid://ceffmt8taic58" path="res://src/main/kotlin/godot/enemy/enemy.kt" id="1_rwf7v"]
-[ext_resource type="Texture2D" uid="uid://c5vrfqf2kxrld" path="res://art/enemyFlyingAlt_1.png" id="2_q7mgd"]
-[ext_resource type="Texture2D" uid="uid://e7tl6ju0a2ia" path="res://art/enemyFlyingAlt_2.png" id="3_e84rt"]
-[ext_resource type="Texture2D" uid="uid://c2nv3oje4et0q" path="res://art/enemySwimming_1.png" id="4_brw3c"]
-[ext_resource type="Texture2D" uid="uid://e3rm07idmh6k" path="res://art/enemySwimming_2.png" id="5_xdrwv"]
-[ext_resource type="Texture2D" uid="uid://dvitnwqrm6uis" path="res://art/enemyWalking_1.png" id="6_ikp4w"]
-[ext_resource type="Texture2D" uid="uid://vw76xbuk4m7g" path="res://art/enemyWalking_2.png" id="7_5qewc"]
+[ext_resource type="Script" uid="uid://bdtfk7nvoparw" path="res://src/main/kotlin/godot/demos/creeps/Enemy.kt" id="1_enbbu"]
+[ext_resource type="Texture2D" uid="uid://c5vrfqf2kxrld" path="res://art/creeps/enemyFlyingAlt_1.png" id="2_q7mgd"]
+[ext_resource type="Texture2D" uid="uid://e7tl6ju0a2ia" path="res://art/creeps/enemyFlyingAlt_2.png" id="3_e84rt"]
+[ext_resource type="Texture2D" uid="uid://c2nv3oje4et0q" path="res://art/creeps/enemySwimming_1.png" id="4_brw3c"]
+[ext_resource type="Texture2D" uid="uid://e3rm07idmh6k" path="res://art/creeps/enemySwimming_2.png" id="5_xdrwv"]
+[ext_resource type="Texture2D" uid="uid://dvitnwqrm6uis" path="res://art/creeps/enemyWalking_1.png" id="6_ikp4w"]
+[ext_resource type="Texture2D" uid="uid://vw76xbuk4m7g" path="res://art/creeps/enemyWalking_2.png" id="7_5qewc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8ysn0"]
 animations = [{
@@ -52,7 +52,7 @@ height = 66.6667
 position = Vector2(-1, 0)
 collision_mask = 0
 gravity_scale = 0.0
-script = ExtResource("1_rwf7v")
+script = ExtResource("1_enbbu")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -67,4 +67,4 @@ shape = SubResource("CapsuleShape2D_x3r12")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
-[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="on_visible_on_screen_notifier_2d_screen_exited"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="on_visible_on_screen_notifier2_d_screen_exited"]

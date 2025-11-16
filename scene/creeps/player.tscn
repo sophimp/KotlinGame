@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bfeibj1dlhssa"]
 
-[ext_resource type="Texture2D" uid="uid://d047j5nov3s4e" path="res://art/playerGrey_up1.png" id="1_hqtel"]
-[ext_resource type="Script" uid="uid://bglnaa0xhmgmd" path="res://src/main/kotlin/godot/player/player.kt" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://dgqjbhyuc7ct4" path="res://art/playerGrey_up2.png" id="2_sweqy"]
-[ext_resource type="Texture2D" uid="uid://blr8o6yngb7p5" path="res://art/playerGrey_walk1.png" id="3_2hs0m"]
-[ext_resource type="Texture2D" uid="uid://dcjangixltsa0" path="res://art/playerGrey_walk2.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://d047j5nov3s4e" path="res://art/creeps/playerGrey_up1.png" id="1_hqtel"]
+[ext_resource type="Script" uid="uid://bq5sqm7rao6n0" path="res://src/main/kotlin/godot/demos/creeps/player.kt" id="1_vx2ov"]
+[ext_resource type="Texture2D" uid="uid://dgqjbhyuc7ct4" path="res://art/creeps/playerGrey_up2.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://blr8o6yngb7p5" path="res://art/creeps/playerGrey_walk1.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://dcjangixltsa0" path="res://art/creeps/playerGrey_walk2.png" id="4_1jxqw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -37,7 +37,7 @@ height = 132.0
 
 [node name="Area2D" type="Area2D"]
 position = Vector2(1, 3)
-script = ExtResource("1_sweqy")
+script = ExtResource("1_vx2ov")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

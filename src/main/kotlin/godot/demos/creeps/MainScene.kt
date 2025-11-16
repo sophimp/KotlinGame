@@ -1,4 +1,4 @@
-import godot.Hud
+import godot.demos.creeps.Hud
 import godot.annotation.Export
 import godot.annotation.RegisterClass
 import godot.annotation.RegisterFunction
@@ -82,7 +82,7 @@ class MainScene : Node() {
 		mob.rotation = direction.toFloat()
 
 		val velocity = Vector2(GD.randfRange(150f, 250f), 0.0)
-		mob.linearVelocity = velocity
+		mob.linearVelocity = velocity.rotated(direction)
 
 		addChild(mob)
 

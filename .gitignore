@@ -10,3 +10,4 @@ src/main/resources/META-INF/services/
 gdj
 
 *.import
+*.log
