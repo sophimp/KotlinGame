@@ -1,0 +1,159 @@
+[gd_scene load_steps=27 format=3 uid="uid://feo02pwvjj2b"]
+
+[ext_resource type="Texture2D" uid="uid://vtksw3im6w5n" path="res://art/hexagonal_game/WWT-01.png" id="1_g248r"]
+[ext_resource type="Texture2D" uid="uid://b5s1t6a475ati" path="res://art/hexagonal_game/WWT-02.png" id="2_s777m"]
+[ext_resource type="Texture2D" uid="uid://jyd4sssmquua" path="res://art/hexagonal_game/WWT-03.png" id="3_bbes8"]
+[ext_resource type="Texture2D" uid="uid://cnfyvd8gq1v0n" path="res://art/hexagonal_game/WWT-04.png" id="4_3byub"]
+[ext_resource type="Texture2D" uid="uid://bk1pcwb1dw6rd" path="res://art/hexagonal_game/WWT-05.png" id="5_8td2f"]
+[ext_resource type="Texture2D" uid="uid://hpfd56jfsci4" path="res://art/hexagonal_game/WWT-06.png" id="6_rcjja"]
+[ext_resource type="Texture2D" uid="uid://2qh80clp2ikq" path="res://art/hexagonal_game/WWT-07.png" id="7_vlym4"]
+[ext_resource type="Texture2D" uid="uid://bsb06au652uq5" path="res://art/hexagonal_game/WWT-08.png" id="8_j16ve"]
+[ext_resource type="Texture2D" uid="uid://eob06238awdh" path="res://art/hexagonal_game/WWT-09.png" id="9_2wipn"]
+[ext_resource type="Texture2D" uid="uid://c7e7untvvx3t4" path="res://art/hexagonal_game/WWT-10.png" id="10_3q7ws"]
+[ext_resource type="Texture2D" uid="uid://su8wvq6d35us" path="res://art/hexagonal_game/WWT-11.png" id="11_8v36p"]
+[ext_resource type="Texture2D" uid="uid://bth3sgrxgxcse" path="res://art/hexagonal_game/WWT-12.png" id="12_51bwg"]
+[ext_resource type="Texture2D" uid="uid://cogbb7cmdttlc" path="res://art/hexagonal_game/WWT-13.png" id="13_uhd00"]
+[ext_resource type="Texture2D" uid="uid://jv6wsjyx0pm3" path="res://art/hexagonal_game/WWT-14.png" id="14_fgosh"]
+[ext_resource type="Texture2D" uid="uid://bk7bf7w7nv0px" path="res://art/hexagonal_game/WWT-15.png" id="15_2ymkh"]
+[ext_resource type="Texture2D" uid="uid://78sgo2tbquvr" path="res://art/hexagonal_game/WWT-16.png" id="16_i677s"]
+[ext_resource type="Texture2D" uid="uid://62uyi0rk3c8" path="res://art/hexagonal_game/WWT-17.png" id="17_t0o8g"]
+[ext_resource type="Texture2D" uid="uid://c5ejow8i1h0ky" path="res://art/hexagonal_game/WWT-18.png" id="18_aj140"]
+[ext_resource type="Texture2D" uid="uid://byrs2owmavnw6" path="res://art/hexagonal_game/WWT-19.png" id="19_e6a15"]
+[ext_resource type="Texture2D" uid="uid://dc4l60d24fopj" path="res://art/hexagonal_game/WWT-20.png" id="20_uemir"]
+[ext_resource type="Texture2D" uid="uid://1j0mp68qfv38" path="res://art/hexagonal_game/WWT-21.png" id="21_weh7n"]
+[ext_resource type="Texture2D" uid="uid://cq3habjv80167" path="res://art/hexagonal_game/WWT-22.png" id="22_8bcnj"]
+[ext_resource type="Texture2D" uid="uid://bfitfbv67c1i7" path="res://art/hexagonal_game/WWT-23.png" id="23_8in4o"]
+[ext_resource type="Texture2D" uid="uid://1lhqkae7dl18" path="res://art/hexagonal_game/WWT-24.png" id="24_qnyuf"]
+[ext_resource type="Texture2D" uid="uid://dpn7x32q2wlp4" path="res://art/hexagonal_game/WWT-25.png" id="25_cce7h"]
+[ext_resource type="Texture2D" uid="uid://c70eaisy3kcnv" path="res://art/hexagonal_game/WWT-26.png" id="26_8a6k2"]
+
+[node name="TilesetEdit" type="Node2D"]
+
+[node name="Tile1" type="Sprite2D" parent="."]
+texture = ExtResource("1_g248r")
+centered = false
+
+[node name="Tile2" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("2_s777m")
+centered = false
+
+[node name="Tile3" type="Sprite2D" parent="."]
+position = Vector2(256, 0)
+texture = ExtResource("3_bbes8")
+centered = false
+
+[node name="Tile4" type="Sprite2D" parent="."]
+position = Vector2(384, 0)
+texture = ExtResource("4_3byub")
+centered = false
+
+[node name="Tile5" type="Sprite2D" parent="."]
+position = Vector2(512, 0)
+texture = ExtResource("5_8td2f")
+centered = false
+
+[node name="Tile6" type="Sprite2D" parent="."]
+position = Vector2(0, 128)
+texture = ExtResource("6_rcjja")
+centered = false
+
+[node name="Tile7" type="Sprite2D" parent="."]
+position = Vector2(128, 128)
+texture = ExtResource("7_vlym4")
+centered = false
+
+[node name="Tile8" type="Sprite2D" parent="."]
+position = Vector2(256, 128)
+texture = ExtResource("8_j16ve")
+centered = false
+
+[node name="Tile9" type="Sprite2D" parent="."]
+position = Vector2(384, 128)
+texture = ExtResource("9_2wipn")
+centered = false
+
+[node name="Tile10" type="Sprite2D" parent="."]
+position = Vector2(512, 128)
+texture = ExtResource("10_3q7ws")
+centered = false
+
+[node name="Tile11" type="Sprite2D" parent="."]
+position = Vector2(0, 256)
+texture = ExtResource("11_8v36p")
+centered = false
+
+[node name="Tile12" type="Sprite2D" parent="."]
+position = Vector2(128, 256)
+texture = ExtResource("12_51bwg")
+centered = false
+
+[node name="Tile13" type="Sprite2D" parent="."]
+position = Vector2(256, 256)
+texture = ExtResource("13_uhd00")
+centered = false
+
+[node name="Tile14" type="Sprite2D" parent="."]
+position = Vector2(384, 256)
+texture = ExtResource("14_fgosh")
+centered = false
+
+[node name="Tile15" type="Sprite2D" parent="."]
+position = Vector2(512, 256)
+texture = ExtResource("15_2ymkh")
+centered = false
+
+[node name="Tile16" type="Sprite2D" parent="."]
+position = Vector2(0, 384)
+texture = ExtResource("16_i677s")
+centered = false
+
+[node name="Tile17" type="Sprite2D" parent="."]
+position = Vector2(128, 384)
+texture = ExtResource("17_t0o8g")
+centered = false
+
+[node name="Tile18" type="Sprite2D" parent="."]
+position = Vector2(256, 384)
+texture = ExtResource("18_aj140")
+centered = false
+
+[node name="Tile19" type="Sprite2D" parent="."]
+position = Vector2(384, 384)
+texture = ExtResource("19_e6a15")
+centered = false
+
+[node name="Tile20" type="Sprite2D" parent="."]
+position = Vector2(512, 384)
+texture = ExtResource("20_uemir")
+centered = false
+
+[node name="Tile21" type="Sprite2D" parent="."]
+position = Vector2(0, 512)
+texture = ExtResource("21_weh7n")
+centered = false
+
+[node name="Tile22" type="Sprite2D" parent="."]
+position = Vector2(128, 512)
+texture = ExtResource("22_8bcnj")
+centered = false
+
+[node name="Tile23" type="Sprite2D" parent="."]
+position = Vector2(256, 512)
+texture = ExtResource("23_8in4o")
+centered = false
+
+[node name="Tile24" type="Sprite2D" parent="."]
+position = Vector2(384, 512)
+texture = ExtResource("24_qnyuf")
+centered = false
+
+[node name="Tile25" type="Sprite2D" parent="."]
+position = Vector2(512, 512)
+texture = ExtResource("25_cce7h")
+centered = false
+
+[node name="Tile26" type="Sprite2D" parent="."]
+position = Vector2(0, 640)
+texture = ExtResource("26_8a6k2")
+centered = false
