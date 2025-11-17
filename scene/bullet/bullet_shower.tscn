@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg5kd2gcwfvha"]
+
+[ext_resource type="Script" uid="uid://7wi63rfwtdeh" path="res://src/main/kotlin/godot/demos/bullet/Bullets.kt" id="1_slncg"]
+[ext_resource type="Script" uid="uid://cyynduj83wffx" path="res://src/main/kotlin/godot/demos/bullet/Player.kt" id="2_e6s2f"]
+
+[node name="BulletShower" type="Node2D"]
+
+[node name="Bullets" type="Node2D" parent="."]
+script = ExtResource("1_slncg")
+
+[node name="Player" type="Area2D" parent="."]
+script = ExtResource("2_e6s2f")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
