@@ -1,7 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg5kd2gcwfvha"]
+[gd_scene load_steps=7 format=3 uid="uid://dg5kd2gcwfvha"]
 
 [ext_resource type="Script" uid="uid://7wi63rfwtdeh" path="res://src/main/kotlin/godot/demos/bullet/Bullets.kt" id="1_slncg"]
 [ext_resource type="Script" uid="uid://cyynduj83wffx" path="res://src/main/kotlin/godot/demos/bullet/Player.kt" id="2_e6s2f"]
+[ext_resource type="Texture2D" uid="uid://den30efy7wfbs" path="res://art/bullet/face_happy.png" id="3_rywi3"]
+[ext_resource type="Texture2D" uid="uid://djh4f38uynw6f" path="res://art/bullet/face_sad.png" id="4_h1fc2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmn45"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rywi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h1fc2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mpwun"]
+radius = 27.2947
 
 [node name="BulletShower" type="Node2D"]
 
@@ -12,5 +31,10 @@ script = ExtResource("1_slncg")
 script = ExtResource("2_e6s2f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_mmn45")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_mpwun")
+
+[connection signal="body_shape_entered" from="Player" to="Player" method="on_body_shape_entered"]
+[connection signal="body_shape_exited" from="Player" to="Player" method="on_body_shape_exited"]
