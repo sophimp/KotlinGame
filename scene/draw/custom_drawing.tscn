@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7oyhvwkl4bpb"]
+[gd_scene load_steps=10 format=3 uid="uid://b7oyhvwkl4bpb"]
 
 [ext_resource type="Script" uid="uid://my35dotvoog8" path="res://src/main/kotlin/godot/demos/draw/CustomDrawing.kt" id="1_60u7f"]
 [ext_resource type="Script" uid="uid://dvie3b6aew16r" path="res://src/main/kotlin/godot/demos/draw/DrawLines.kt" id="2_yjyn2"]
+[ext_resource type="Script" uid="uid://dpf00cikhewod" path="res://src/main/kotlin/godot/demos/draw/DrawPolygons.kt" id="3_7vw37"]
+[ext_resource type="Script" uid="uid://bp5ix4rr2mgbk" path="res://src/main/kotlin/godot/demos/draw/DrawRectangles.kt" id="3_21bsc"]
+[ext_resource type="Script" uid="uid://vvuqfxv6o0qn" path="res://src/main/kotlin/godot/demos/draw/DrawMeshes.kt" id="3_uengx"]
+[ext_resource type="Script" uid="uid://usus71kptd45" path="res://src/main/kotlin/godot/demos/draw/DrawAnimation.kt" id="3_yjyn2"]
+[ext_resource type="Script" uid="uid://bjtle6j7f5dt4" path="res://src/main/kotlin/godot/demos/draw/DrawAnimationSlices.kt" id="4_dgc7v"]
+[ext_resource type="Script" uid="uid://doqpoc5bbvtj2" path="res://src/main/kotlin/godot/demos/draw/DrawText.kt" id="6_pubo5"]
+[ext_resource type="Script" uid="uid://dwdaqeguj18i3" path="res://src/main/kotlin/godot/demos/draw/DrawTextures.kt" id="7_nknl7"]
 
 [node name="CustomDrawing" type="Control"]
 layout_mode = 3
@@ -29,29 +36,81 @@ metadata/_tab_index = 0
 [node name="Rectangles" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+script = ExtResource("3_21bsc")
 metadata/_tab_index = 1
 
 [node name="Polygons" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+script = ExtResource("3_7vw37")
 metadata/_tab_index = 2
 
 [node name="Meshes" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+script = ExtResource("3_uengx")
 metadata/_tab_index = 3
 
 [node name="Text" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+script = ExtResource("6_pubo5")
 metadata/_tab_index = 4
 
 [node name="Textures" type="Control" parent="TabContainer"]
 visible = false
+texture_repeat = 2
 layout_mode = 2
+script = ExtResource("7_nknl7")
 metadata/_tab_index = 5
 
 [node name="Animation" type="Control" parent="TabContainer"]
 visible = false
 layout_mode = 2
+script = ExtResource("3_yjyn2")
 metadata/_tab_index = 6
+
+[node name="AnimationSclies" type="Control" parent="TabContainer/Animation"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_dgc7v")
+
+[node name="Options" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="MSAA2DLabel" type="Label" parent="Options"]
+layout_mode = 2
+text = "MSAA 2D"
+
+[node name="MSAA2DOptions" type="OptionButton" parent="Options"]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Disabled"
+popup/item_0/id = 0
+popup/item_1/text = "2x"
+popup/item_1/id = 1
+popup/item_2/text = "4x"
+popup/item_2/id = 2
+popup/item_3/text = "8x"
+popup/item_3/id = 3
+
+[node name="VSeparator" type="VSeparator" parent="Options"]
+layout_mode = 2
+
+[node name="DrawAntialiasing" type="CheckButton" parent="Options"]
+layout_mode = 2
+text = "Draw Antialiasing"
+
+[connection signal="item_selected" from="Options/MSAA2DOptions" to="." method="on_msaa2d_item_selected"]
+[connection signal="toggled" from="Options/DrawAntialiasing" to="." method="on_draw_antialiasing_toggled"]

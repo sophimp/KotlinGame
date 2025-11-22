@@ -16,12 +16,13 @@ class CustomDrawing : Control(){
 
 	@RegisterFunction
 	fun onDrawAntialiasingToggled(toggleOn: Boolean) {
-		val tabContainer = getNode("tabContainer") as TabContainer
+		val tabContainer = getNode("TabContainer") as TabContainer
 		val nodes = tabContainer.getChildren()
-//        nodes.pushBack(DrawAnimationSlices())
+		getNode("Animation/AnimationSlices")?.let {
+			nodes.pushBack(it)
+		}
 		nodes.forEach {
-//            (it as Control).useAntialiasing = toggleOn
-			(it as Control).useParentMaterial = toggleOn
+			(it as BaseDraw).useAntialiasing = toggleOn
 			it.queueRedraw()
 		}
 	}

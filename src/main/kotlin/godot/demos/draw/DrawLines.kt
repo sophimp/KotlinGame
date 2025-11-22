@@ -2,14 +2,12 @@ package godot.demos.draw
 
 import godot.annotation.RegisterClass
 import godot.annotation.RegisterFunction
-import godot.api.Panel
 import godot.common.util.TAU
 import godot.core.Color
 import godot.core.Vector2
 
 @RegisterClass
-class DrawLines : Panel() {
-	var useAntialiasing: Boolean = false
+class DrawLines : BaseDraw() {
 
 	@RegisterFunction
 	override fun _draw() {
